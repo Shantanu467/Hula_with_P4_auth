@@ -1,0 +1,392 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 40421251
+    name: "MyIngress.hula_logic"
+    alias: "hula_logic"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.protocol"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 24138132
+  }
+  action_refs {
+    id: 22356840
+  }
+  action_refs {
+    id: 25652968
+  }
+  size: 4
+}
+tables {
+  preamble {
+    id: 38186886
+    name: "MyIngress.get_dst_tor"
+    alias: "get_dst_tor"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.dstAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 30253652
+  }
+  action_refs {
+    id: 28579937
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 47440473
+    name: "MyIngress.edge_forward"
+    alias: "edge_forward"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.dstAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 23501738
+  }
+  action_refs {
+    id: 25652968
+  }
+  size: 4
+}
+tables {
+  preamble {
+    id: 38381149
+    name: "MyIngress.register_map"
+    alias: "register_map"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.packet_reg.regId"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 2
+    name: "hdr.packet_out.msgType"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 25652968
+  }
+  action_refs {
+    id: 27286722
+  }
+  action_refs {
+    id: 25987746
+  }
+  size: 1024
+  is_const_table: true
+}
+tables {
+  preamble {
+    id: 49415383
+    name: "MyIngress.test_tbl"
+    alias: "test_tbl"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.hula.dst_tor"
+    bitwidth: 24
+    match_type: EXACT
+  }
+  match_fields {
+    id: 2
+    name: "hdr.hula.path_util"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 25652968
+  }
+  action_refs {
+    id: 27286722
+  }
+  action_refs {
+    id: 25987746
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 25652968
+    name: "MyIngress.drop"
+    alias: "drop"
+  }
+}
+actions {
+  preamble {
+    id: 24138132
+    name: "MyIngress.hula_handle_probe"
+    alias: "hula_handle_probe"
+  }
+}
+actions {
+  preamble {
+    id: 22356840
+    name: "MyIngress.hula_handle_data_packet"
+    alias: "hula_handle_data_packet"
+  }
+}
+actions {
+  preamble {
+    id: 30253652
+    name: "MyIngress.set_dst_tor"
+    alias: "set_dst_tor"
+  }
+  params {
+    id: 1
+    name: "dst_tor"
+    bitwidth: 24
+  }
+  params {
+    id: 2
+    name: "self_id"
+    bitwidth: 24
+  }
+}
+actions {
+  preamble {
+    id: 28579937
+    name: "MyIngress.dummy_dst_tor"
+    alias: "dummy_dst_tor"
+  }
+}
+actions {
+  preamble {
+    id: 23501738
+    name: "MyIngress.simple_forward"
+    alias: "simple_forward"
+  }
+  params {
+    id: 1
+    name: "port"
+    bitwidth: 9
+  }
+}
+actions {
+  preamble {
+    id: 24593446
+    name: "MyIngress.update_ingress_statistics"
+    alias: "update_ingress_statistics"
+  }
+}
+actions {
+  preamble {
+    id: 27397187
+    name: "MyIngress.calculate_hula_digest"
+    alias: "calculate_hula_digest"
+  }
+}
+actions {
+  preamble {
+    id: 18575305
+    name: "MyIngress.send_packet_in"
+    alias: "send_packet_in"
+  }
+}
+actions {
+  preamble {
+    id: 27286722
+    name: "MyIngress.keys_read"
+    alias: "keys_read"
+  }
+}
+actions {
+  preamble {
+    id: 25987746
+    name: "MyIngress.keys_write"
+    alias: "keys_write"
+  }
+}
+actions {
+  preamble {
+    id: 30561632
+    name: "MyIngress.authPkt"
+    alias: "authPkt"
+  }
+}
+controller_packet_metadata {
+  preamble {
+    id: 76689799
+    name: "packet_out"
+    alias: "packet_out"
+    annotations: "@controller_header(\"packet_out\")"
+  }
+  metadata {
+    id: 1
+    name: "hdrType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 2
+    name: "msgType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 3
+    name: "pktDgst"
+    bitwidth: 32
+  }
+}
+controller_packet_metadata {
+  preamble {
+    id: 81826293
+    name: "packet_in"
+    alias: "packet_in"
+    annotations: "@controller_header(\"packet_in\")"
+  }
+  metadata {
+    id: 1
+    name: "hdrType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 2
+    name: "msgType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 3
+    name: "pktDgst"
+    bitwidth: 32
+  }
+}
+registers {
+  preamble {
+    id: 380100690
+    name: "MyIngress.port_util"
+    alias: "port_util"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 255
+}
+registers {
+  preamble {
+    id: 381353973
+    name: "MyIngress.port_util_last_updated"
+    alias: "port_util_last_updated"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 255
+}
+registers {
+  preamble {
+    id: 371683811
+    name: "MyIngress.update_time"
+    alias: "update_time"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 512
+}
+registers {
+  preamble {
+    id: 371065453
+    name: "MyIngress.best_hop"
+    alias: "best_hop"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 9
+      }
+    }
+  }
+  size: 512
+}
+registers {
+  preamble {
+    id: 371733219
+    name: "MyIngress.flowlet_time"
+    alias: "flowlet_time"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 380376027
+    name: "MyIngress.flowlet_hop"
+    alias: "flowlet_hop"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 9
+      }
+    }
+  }
+  size: 1024
+}
+registers {
+  preamble {
+    id: 374386862
+    name: "MyIngress.min_path_util"
+    alias: "min_path_util"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 512
+}
+registers {
+  preamble {
+    id: 370631882
+    name: "MyIngress.keys"
+    alias: "keys"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 256
+}
+type_info {
+}

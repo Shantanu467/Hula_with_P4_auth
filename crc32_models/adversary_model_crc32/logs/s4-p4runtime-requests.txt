@@ -1,0 +1,129 @@
+
+[2023-05-01 19:53:15.582] /p4.v1.P4Runtime/SetForwardingPipelineConfig
+---
+Message too long (200669 bytes)! Skipping log...
+---
+
+[2023-05-01 19:53:16.233] /p4.v1.P4Runtime/Write
+---
+device_id: 3
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 40421251
+      match {
+        field_id: 1
+        exact {
+          value: "B"
+        }
+      }
+      action {
+        action {
+          action_id: 24138132
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:53:16.236] /p4.v1.P4Runtime/Write
+---
+device_id: 3
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 40421251
+      match {
+        field_id: 1
+        exact {
+          value: "\006"
+        }
+      }
+      action {
+        action {
+          action_id: 22356840
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:53:16.246] /p4.v1.P4Runtime/Write
+---
+device_id: 3
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 38186886
+      match {
+        field_id: 1
+        exact {
+          value: "\n\000\001\001"
+        }
+      }
+      action {
+        action {
+          action_id: 30253652
+          params {
+            param_id: 1
+            value: "\000\000\001"
+          }
+          params {
+            param_id: 2
+            value: "\000\000\004"
+          }
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:53:16.253] /p4.v1.P4Runtime/Write
+---
+device_id: 3
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 38186886
+      match {
+        field_id: 1
+        exact {
+          value: "\n\000\002\002"
+        }
+      }
+      action {
+        action {
+          action_id: 30253652
+          params {
+            param_id: 1
+            value: "\000\000\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\000\004"
+          }
+        }
+      }
+    }
+  }
+}
+---

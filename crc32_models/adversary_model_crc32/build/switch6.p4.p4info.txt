@@ -1,0 +1,90 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 37943225
+    name: "MyIngress.forward_packet"
+    alias: "forward_packet"
+  }
+  match_fields {
+    id: 1
+    name: "standard_metadata.ingress_port"
+    bitwidth: 9
+    match_type: EXACT
+  }
+  action_refs {
+    id: 31959690
+  }
+  action_refs {
+    id: 25652968
+  }
+  size: 10
+}
+actions {
+  preamble {
+    id: 25652968
+    name: "MyIngress.drop"
+    alias: "drop"
+  }
+}
+actions {
+  preamble {
+    id: 31959690
+    name: "MyIngress.packet_forward"
+    alias: "packet_forward"
+  }
+  params {
+    id: 1
+    name: "port"
+    bitwidth: 9
+  }
+}
+controller_packet_metadata {
+  preamble {
+    id: 76689799
+    name: "packet_out"
+    alias: "packet_out"
+    annotations: "@controller_header(\"packet_out\")"
+  }
+  metadata {
+    id: 1
+    name: "hdrType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 2
+    name: "msgType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 3
+    name: "pktDgst"
+    bitwidth: 32
+  }
+}
+controller_packet_metadata {
+  preamble {
+    id: 81826293
+    name: "packet_in"
+    alias: "packet_in"
+    annotations: "@controller_header(\"packet_in\")"
+  }
+  metadata {
+    id: 1
+    name: "hdrType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 2
+    name: "msgType"
+    bitwidth: 8
+  }
+  metadata {
+    id: 3
+    name: "pktDgst"
+    bitwidth: 32
+  }
+}
+type_info {
+}

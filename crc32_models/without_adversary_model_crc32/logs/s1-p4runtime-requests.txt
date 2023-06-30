@@ -1,0 +1,155 @@
+
+[2023-05-01 19:07:13.246] /p4.v1.P4Runtime/SetForwardingPipelineConfig
+---
+Message too long (200651 bytes)! Skipping log...
+---
+
+[2023-05-01 19:07:14.428] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 40421251
+      match {
+        field_id: 1
+        exact {
+          value: "B"
+        }
+      }
+      action {
+        action {
+          action_id: 24138132
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:07:14.435] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 40421251
+      match {
+        field_id: 1
+        exact {
+          value: "\006"
+        }
+      }
+      action {
+        action {
+          action_id: 22356840
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:07:14.460] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 47440473
+      match {
+        field_id: 1
+        exact {
+          value: "\n\000\001\001"
+        }
+      }
+      action {
+        action {
+          action_id: 23501738
+          params {
+            param_id: 1
+            value: "\000\001"
+          }
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:07:14.461] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 38186886
+      match {
+        field_id: 1
+        exact {
+          value: "\n\000\001\001"
+        }
+      }
+      action {
+        action {
+          action_id: 30253652
+          params {
+            param_id: 1
+            value: "\000\000\001"
+          }
+          params {
+            param_id: 2
+            value: "\000\000\001"
+          }
+        }
+      }
+    }
+  }
+}
+---
+
+[2023-05-01 19:07:14.477] /p4.v1.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 38186886
+      match {
+        field_id: 1
+        exact {
+          value: "\n\000\002\002"
+        }
+      }
+      action {
+        action {
+          action_id: 30253652
+          params {
+            param_id: 1
+            value: "\000\000\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\000\001"
+          }
+        }
+      }
+    }
+  }
+}
+---

@@ -1,0 +1,666 @@
+sniffing on h1-eth0
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 47
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c6
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0x8893
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye1000'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf83
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye999'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf84
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye998'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf85
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye997'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf86
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye996'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf87
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye995'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf88
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye994'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf89
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye993'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf8a
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye992'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf8b
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye991'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xaf8c
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye990'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb083
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye989'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb084
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye988'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb085
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye987'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb086
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye986'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb087
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye985'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb088
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye984'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb089
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye983'
+
+inside handle_pkt
+inside handle_pkt2
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 00:00:00:00:02:02
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 46
+     id        = 1
+     flags     = 
+     frag      = 0
+     ttl       = 64
+     proto     = tcp
+     chksum    = 0x63c7
+     src       = 10.0.2.2
+     dst       = 10.0.1.1
+     \options   \
+###[ TCP ]### 
+        sport     = 58264
+        dport     = 1234
+        seq       = 0
+        ack       = 0
+        dataofs   = 5
+        reserved  = 0
+        flags     = S
+        window    = 8192
+        chksum    = 0xb08a
+        urgptr    = 0
+        options   = []
+###[ Raw ]### 
+           load      = 'Bye982'
+

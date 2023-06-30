@@ -1,0 +1,91 @@
+#include <bm/bm_sim/extern.h>
+
+#define ROTATE_LEFT(x, b) (unsigned long)(((x) << (b)) | ((x) >> (64 - (b))))
+
+#define COMPRESS                \
+  v0 += v1;                     \
+  v2 += v3;                     \
+  v1 = ROTATE_LEFT(v1, 13);     \
+  v3 = ROTATE_LEFT(v3, 16);     \
+  v1 ^= v0;                     \
+  v3 ^= v2;                     \
+  v0 = ROTATE_LEFT(v0, 32);     \
+  v2 += v1;                     \
+  v0 += v3;                     \
+  v1 = ROTATE_LEFT(v1, 17);     \
+  v3 = ROTATE_LEFT(v3, 21);     \
+  v1 ^= v2;                     \
+  v3 ^= v0;                     \
+  v2 = ROTATE_LEFT(v2, 32);
+
+#define DIGEST_BLOCK            \
+  v3 ^= m;                      \
+  do {                          \
+    int i;                      \
+    for(i = 0; i < c; i++){     \
+      COMPRESS                  \
+    }                           \
+  } while (0);                  \
+  v0 ^= m;
+
+#define U8TO64_LE(p)                                                    \
+  (((uint64_t)((p)[0])) | ((uint64_t)((p)[1]) << 8) |                           \
+   ((uint64_t)((p)[2]) << 16) | ((uint64_t)((p)[3]) << 24) |            \
+   ((uint64_t)((p)[4]) << 32) | ((uint64_t)((p)[5]) << 40) |            \
+   ((uint64_t)((p)[6]) << 48) | ((uint64_t)((p)[7]) << 56))
+
+
+// Example custom extern function.
+void siphash_digest(bm::Data& data, bm::Data& result){
+	int c, d, m_idx;
+        uint64_t v0, v1, v2, v3, m;
+        unsigned char input_len;
+
+        char* key = "0123456789ABCDEF";
+
+        c = 2;
+        d = 4;
+
+        uint64_t k0 = U8TO64_LE(key);
+        uint64_t k1 = U8TO64_LE(key + 8);
+
+        v0 = (0x736f6d6570736575 ^ k0);
+        v1 = (0x646f72616e646f6d ^ k1);
+        v2 = (0x6c7967656e657261 ^ k0);
+        v3 = (0x7465646279746573 ^ k1);
+
+        m_idx = 0;
+        input_len = 0;
+        m = 0;
+
+        const char *pszChar = data.get<std::const char*>();
+        while (pszChar != NULL && *pszChar != '\0') {
+                input_len++;
+                m |= (((long) *pszChar & 0xff) << (m_idx++ * 8));
+                if (m_idx >= 8) {
+                        DIGEST_BLOCK
+                        m_idx = 0;
+                        m = 0;
+                }
+                pszChar++;
+        }
+
+        while (m_idx < 7) {
+               m |= 0 << (m_idx++ * 8);
+        }
+
+        m |= ((uint64_t) input_len) << (m_idx * 8);
+
+        DIGEST_BLOCK
+
+        v2 ^= 0xff;
+
+        for(int i = 0; i < d; i++){
+                COMPRESS
+        }
+
+        return ((uint64_t) v0 ^ v1 ^ v2 ^;
+}
+
+
+BM_REGISTER_EXTERN_FUNCTION(siphash_digest, const char*);
